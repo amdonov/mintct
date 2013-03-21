@@ -1,0 +1,9 @@
+cmake_minimum_required (VERSION 2.6)
+project (mindtct)
+include_directories("/usr/include/nbis" "/usr/java/default/include"
+	"/usr/java/default/include/linux")
+link_directories(/usr/lib64/nbis)
+FIND_PACKAGE(SWIG REQUIRED)
+INCLUDE(${SWIG_USE_FILE})
+SWIG_ADD_MODULE(libmindtct java mindtct.i mindtct.c)
+SWIG_LINK_LIBRARIES(libmindtct wsq)
