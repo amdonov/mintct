@@ -26,7 +26,7 @@ extract_xyt (char *image_file, char *minutiae_file)
 					      &idata, &ilen, &iw, &ih, &id,
 					      &ippi)))
     {
-      exit (ret);
+      return ret;
     }
   /* If image ppi not defined, then assume 500 */
   if (ippi == UNDEFINED)
@@ -41,7 +41,7 @@ extract_xyt (char *image_file, char *minutiae_file)
 			   idata, iw, ih, id, ippmm, &lfsparms_V2)))
     {
       free (idata);
-      exit (ret);
+      return ret;
     }
 
   /* Done with input image data */
@@ -62,7 +62,7 @@ extract_xyt (char *image_file, char *minutiae_file)
 				  minutiae, map_w, map_h)))
     {
       free_minutiae (minutiae);
-      exit (ret);
+      return ret;
     }
 
   /* Done with minutiae and binary image results */
