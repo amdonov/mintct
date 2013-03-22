@@ -1,6 +1,6 @@
 Name: mindtct          
 Version: 0.1       
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary: C library and Java wrapper around mindtct minutiae extractor       
 
 License: Booz Allen Hamilton       
@@ -44,6 +44,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Mar 22 2013 Aaron Donovan <amdonov@gmail.com> 0.1-2
+- Corrected NBIS dependency (amdonov@gmail.com)
+
+* Fri Mar 22 2013 Aaron Donovan <amdonov@gmail.com>
+- Corrected NBIS dependency (amdonov@gmail.com)
+
 * Fri Mar 22 2013 Aaron Donovan <amdonov@gmail.com> 0.1-1
 - new package built with tito
 
