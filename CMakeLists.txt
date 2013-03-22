@@ -8,3 +8,6 @@ INCLUDE(${SWIG_USE_FILE})
 SWIG_ADD_MODULE(libmindtct java mindtct.i mindtct.c)
 SWIG_LINK_LIBRARIES(libmindtct mindtct image an2k openjpeg ihead jpegb jpegl
 	wsq png fet ioutil util m z)
+install(FILES libmindtct.so DESTINATION usr/lib64)
+install(FILES mindtct.jar DESTINATION usr/share/java)
+
