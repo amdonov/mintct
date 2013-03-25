@@ -5,6 +5,7 @@ include_directories("/usr/include/nbis" "/usr/java/default/include"
 link_directories(/usr/lib64/nbis)
 FIND_PACKAGE(SWIG REQUIRED)
 INCLUDE(${SWIG_USE_FILE})
+SET(CMAKE_SWIG_FLAGS -package "com.bah.biometrics")
 SWIG_ADD_MODULE(libmindtct java mindtct.i mindtct.c)
 SWIG_LINK_LIBRARIES(libmindtct mindtct image an2k openjpeg ihead jpegb jpegl
 	wsq png fet ioutil util m z)
