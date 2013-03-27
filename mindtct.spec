@@ -1,6 +1,6 @@
 Name: mindtct          
 Version: 0.1       
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary: C library and Java wrapper around mindtct minutiae extractor       
 
 License: Booz Allen Hamilton       
@@ -44,6 +44,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Mar 27 2013 Aaron Donovan <amdonov@gmail.com> 0.1-4
+- Requiring version NBIS with threadsafe WSQ code (amdonov@gmail.com)
+
 * Mon Mar 25 2013 Aaron Donovan <amdonov@gmail.com> 0.1-3
 - Moving Java classes to com.bah.biometrics package (amdonov@gmail.com)
 - Merge branch 'master' of github.com:amdonov/mintct (amdonov@gmail.com)
