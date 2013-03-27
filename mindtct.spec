@@ -6,7 +6,7 @@ Summary: C library and Java wrapper around mindtct minutiae extractor
 License: Booz Allen Hamilton       
 Source0: %{name}-%{version}.tar.gz       
 
-BuildRequires: cmake NBIS
+BuildRequires: cmake, NBIS >= 4.1.0-6
 Requires: java      
 
 %description
